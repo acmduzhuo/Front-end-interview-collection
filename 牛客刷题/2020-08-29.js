@@ -37,3 +37,57 @@
 // 0 ? 1 : 2 number到boolean
 // 2e1 * 0xaa
 // 1 + '1' number到string
+
+//6.
+//以下代码中,为class为test的div对象设置红色背景的正确js代码为
+//<div class="test"></div>
+//document.getElementsByClassName("test")[0].style.backgroundColor="red";
+//在js里面添加的属性名使用驼峰法，在css里面使用连接线 除了id和query 其他返回的都是节点列表
+
+//7.
+//与其他 IEEE 754 表示浮点数的编程语言一样，JavaScript 的 number 存在精度问题，比如 0.2 + 0.4 的结果是 0.6000000000000001。
+// 以下选项中，能得到 0.6 的是？
+//parseFloat((0.2 + 0.4).toFixed(1))
+
+//8.
+//Angular大大减少了对DOM的访问。
+// jQuery极大的丰富了DOM操作
+
+//9.
+//void();
+//上面表达式的结果是：
+//SyntaxError
+//typeof  1; //'number'
+// typeof (1);//'number'
+// typeof (); //SyntaxError 语法错误
+//void  0; //undefined
+// void (0);//undefined
+// void (); //SyntaxError 语法错误
+
+//10.
+//以下代码执行后，array 的结果是？
+// let array = [,1,,2,,3];
+// array = array.map((i) => ++i)
+// console.log(array);//[ <1 empty item>, 2, <1 empty item>, 3, <1 empty item>, 4 ]
+// const array1 = [1, 2, ,3, ,];
+//
+// array1.forEach(element => console.log(element));
+// 1
+// 2
+// 3
+// console.log(array1.filter(element => (element>=2)));//[ 2, 3 ]
+// console.log(array1.reduce((x,y) => x+y));//6
+// console.log(array1.every(x => x>=2));//false
+// console.log(array1.some(x => x>=2));//true
+// console.log(array1.join('!'));//1,2,,3,
+// console.log(array1.toString());//1,2,,3,
+// ES5
+// orEach(), filter(), reduce(), every() 和some()都会跳过空位。
+// map()会跳过空位，但会保留这个值
+// join()和toString()会将空位视为undefined，而undefined和null会被处理成空字符串。
+// ES6 中都会将空位当做undefined
+
+//11.
+//在一个表单中，如果想要给输入框添加一个输入验证，可以用下面的哪个事件实现？
+// change()
+// change(fn)
