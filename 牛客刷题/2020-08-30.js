@@ -101,3 +101,65 @@
 // <img src=”” onerror=”alert(1)”/> 图片不存在时
 // IE下<s style=”top:expression(alert(1))”></s> expression，用来把CSS属性和Javascript表达式关联起来
 // <div onclick=”alert(1)”></div>因为div里没有内容，盒子的宽度为0所以点击不了的
+
+//12.
+// console.log(1+ "2"+"2");//122
+// console.log(1+ +"2"+"2");//32
+// console.log("A"- "B"+"2");//NaN2
+// console.log("A"- "B"+2);//NaN
+
+//13.
+//如何遍历下面的 my_data 对象？
+// var my_data={a:’Ape’, b:’Banana’, c:’Citronella’};
+// A for(var key in my_data) {} 1
+// B foreach(my_data as key=>value) {}
+// forEach是迭代，也就是遍历，但是应该用ES7里面的entries。
+// for(let[key, value] of my_data.entries()) { `${key}+${value}`}。
+// C for(var i=0;i<my_data.length;i++) {} 对象没有length属性
+// D 全不正确
+
+//14.
+//在很多时候，我们需要给网页中的一些元素不停的切换样式，
+//那么要怎样实现给元素删除一个样式的同时，添加另外一个样式
+// 常用有三种：
+// ①元素选择器：$("TagName")
+// ②ID 选择器：  $("#ID")
+// ③类选择器：$(".className")
+
+//15.
+// const a = 1;
+// const b = 2;
+// const forEach = {a, b};
+// console.log(forEach);//{ a: 1, b: 2 }
+// enum TYPE {
+//     OK,
+//         YES
+// }//SyntaxError: Unexpected reserved word
+
+//16.
+// var x = new Boolean(false);
+// if (x) {
+//     console.log('hi');
+// }
+// var y = Boolean(0);
+// if (y) {
+//     console.log('hello');
+// }
+//的显示结果是？hi
+// console.log(Boolean(false));//false
+// console.log(new Boolean(false));//[Boolean: false]
+
+//17.
+//<p>I come from </p><p>I love  </p>
+// $("p").append("china");
+// $("b").appendTo("p")
+
+//18.
+// var a = /(-?[1-9]\d*)|0/;
+// var b = /[1-9]\d*/;
+// var c = /-[1-9]\d*/;
+// var d = /[1-9]\d*|0/;
+// console.log(a.test(0));//true
+// console.log(b.test(0));//false
+// console.log(c.test(0));//false
+// console.log(d.test(-2));
