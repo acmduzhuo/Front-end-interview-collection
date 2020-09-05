@@ -35,3 +35,7 @@
 // HTML 被设计用来显示数据，其焦点是数据的外观。
 //
 // HTML 旨在显示信息，而 XML 旨在传输信息。
+
+//4.
+console.log({} + 'a');//[object Object]a
+console.log({}+'a' > {}+'b');//false

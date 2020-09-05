@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        function myFunc() {
-            document.write(a);
-            document.write(func());
-            var a = 1;
-            function func() {
-                return 2;
-            }
-        }
-    </script>
+<!--    <script>-->
+<!--        function myFunc() {-->
+<!--            document.write(a);-->
+<!--            document.write(func());-->
+<!--            var a = 1;-->
+<!--            function func() {-->
+<!--                return 2;-->
+<!--            }-->
+<!--        }-->
+<!--    </script>-->
 </head>
 <body>
-<p>1</p>
-<button onclick = "myFunc()">点击</button>
+<!--<p>1</p>-->
+<!--<button onclick = "myFunc()">点击</button>-->
+<script type="text/javascript">
+    // var test=new Boolean();
+    // document.write(test);
+    // document.write("<br />");
+    //
+    // var test=new Boolean(0);
+    // document.write(test);
+    // document.write("<br />");
+    //
+    // var test=new Boolean(null);
+    // document.write(test);
+    // document.write("<br />");
+    //
+    // var test=new Boolean("");
+    // document.write(test);
+    // document.write("<br />");
+    //
+    // var test=new Boolean(NaN);
+    // document.write(test);
+    // document.write("<br />");
+    document.getElementById('a').addEventListener('click', e => {console.log(1)});
+    document.getElementById('b').addEventListener('click', e => {e.preventDefault();console.log(2)});
+</script>
+<div id="a"><div id="b">1</div></div>
 </body>
 </html>
