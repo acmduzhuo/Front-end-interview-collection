@@ -49,3 +49,41 @@
 // 所以用Array.join()不会新建临时字符串效率更高。
 // var str = [1, 2, 3];
 // console.log(str.join('!'));//1!2!3
+
+//8.
+// var p1 = {
+//     name:'小明',
+//     age:'12',
+//     action:function(where,doing){
+//         console.log(this.age + '岁的'+this.name + '在' + where + doing);
+//     }
+// }
+// p1.action('操场上','运动');//12岁的小明在操场上运动
+
+//9.
+// var m= 1, j = k = 0;
+// function add(n) {
+//     n = n+1;
+//     console.log(n);
+// }
+// add(m);
+// function add(n) {
+//     n = n + 3;
+//     console.log(n);
+//     console.log('running');
+// }
+// add(m);
+//function add(){}定义的函数会优先解析，而不是顺序解析
+
+//10.
+// 下面结果为不为真的表达式是：()
+// A null == undefined  Object.prototype;
+// B [1,2,3].splice(1,1,1) == [2]
+// C let Mi = new Function();Mi.__proto__.__proto__ == Object.prototype;
+// D '1' === true
+let Mi = new Function();
+console.log(Mi.__proto__.__proto__ == Object.prototype);
+console.log([1,2,3].splice(1,1,1) == [2]);
+// console.log(null == undefined);//true
+// console.log(Object.prototype);
+// console.log('1' === true);//false
