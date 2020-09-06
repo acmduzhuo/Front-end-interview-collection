@@ -81,9 +81,17 @@
 // B [1,2,3].splice(1,1,1) == [2]
 // C let Mi = new Function();Mi.__proto__.__proto__ == Object.prototype;
 // D '1' === true
-let Mi = new Function();
-console.log(Mi.__proto__.__proto__ == Object.prototype);
-console.log([1,2,3].splice(1,1,1) == [2]);
+// let Mi = new Function();
+// console.log(Mi.__proto__.__proto__ == Object.prototype);
+// console.log([1,2,3].splice(1,1,1) == [2]);
 // console.log(null == undefined);//true
 // console.log(Object.prototype);
 // console.log('1' === true);//false
+let Mi = new Function();
+console.log(Mi.__proto__ === Function.prototype);//true
+console.log(Function.__proto__ === Function.prototype);//true
+console.log(Function.prototype.__proto__ === Object.prototype);//true
+console.log(Object.prototype);
+console.log(null == undefined);//true
+console.log(null === undefined);//false
+console.log(Mi.__proto__.__proto__ == Object.prototype);//true
