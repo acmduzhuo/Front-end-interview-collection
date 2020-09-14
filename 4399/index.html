@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>display:inline-block元素之间空隙的产生原因和解决办法</title>
+<!--    https://blog.csdn.net/qq_32614411/article/details/82223624-->
+    <style type="text/css">
+        .parent .child {
+            display: inline-block;
+            background-color: #fdfd04;
+            width: 100px;
+            height: 100px;
+        }
+        /*.parent .child+.child{*/
+        /*    margin-left: -8px;*/
+        /*}*/
+        /*.parent{*/
+        /*    display: table;*/
+        /*    word-spacing: -1em;*/
+        /*}*/
+    </style>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<!--<div class="parent" >-->
+<!--    <div class="child">child1</div><div class="child">child2</div>-->
+<!--</div>-->
+<!--<div class="parent" style="font-size: 0">-->
+<!--    <div class="child" style="font-size: 16px">child1</div>-->
+<!--    <div class="child" style="font-size: 16px">child2</div>-->
+<!--</div>-->
+<!--<div class="parent" style="float:left">-->
+<!--    <div class="child" style="float:left">child1</div>-->
+<!--    <div class="child" style="float:left">child2</div>-->
+<!--</div>-->
+<!--<div class="parent" >-->
+<!--    <div class="child">child1</div>-->
+<!--    <div class="child">child2</div>-->
+<!--</div>-->
+<div style="width: 90px;padding: 5px; border: 10px solid">
+    天秀
+</div>
+<!--<script>-->
+<!--    let div = document.getElementsByTagName("div")[0];-->
+<!--    console.log(div.offsetWidth);-->
+<!--</script>-->
+<script>
+    $(document.body).css("background","blue");//only
+</script>
+</body>
+</html>
