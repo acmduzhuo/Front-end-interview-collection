@@ -83,3 +83,8 @@
 //ComponentWillUpdate 组件将要被更新
 //ComponentDidUpdate 组件更新完毕
 //ComponentWillUnmount 主讲将要被销毁
+
+//second
+//1.
+//CSS垂直居中和水平居中的方法：
+//

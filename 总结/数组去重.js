@@ -41,19 +41,19 @@ var arr = [1, 2, 1, undefined, null, undefined, 'a', 'b', 'a'];
 
 //5.
 //对象属性唯一性，存在问题，像关键字与“关键字”
-// var arr = [1, 2, 1, undefined, null, undefined, 'a', 'b', 'a',true,true,'true'];
-// var arr_1 = [];
-// var obj = {};
-// for(var i=0;i<arr.length;i++){
-//     if(!obj[arr[i]]){
-//         arr_1.push(arr[i]);
-//         obj[arr[i]] = 1;
-//     } else {
-//         obj[arr[i]]++;
-//     }
-// }
-// console.log(arr_1);
-
+var arr = [1, 2, 1, undefined, null, undefined, 'a', 'b', 'a',true,true,'true'];
+var arr_1 = [];
+var obj = {};
+for(var i=0;i<arr.length;i++){
+    if(!obj[arr[i]]){
+        arr_1.push(arr[i]);
+        obj[arr[i]] = 1;
+    } else {
+        obj[arr[i]]++;
+    }
+}
+console.log(arr_1);
+console.log(obj);
 //6.
 //利用 includes，与indexOf相似
 // var arr_1 = [];
@@ -66,11 +66,11 @@ var arr = [1, 2, 1, undefined, null, undefined, 'a', 'b', 'a'];
 
 //7.
 //hasOwnPropery判断是否在存在对象属性 ??
-function f(arr) {
-    var obj = {};
-    return arr.filter(function (item, index, arr) {
-        console.log(obj);
-        return obj.hasOwnProperty(typeof item+item) ? false : (obj[typeof item+item])=true;
-    })
-}
-console.log(f(arr));
+// function f(arr) {
+//     var obj = {};
+//     return arr.filter(function (item, index, arr) {
+//         console.log(obj);
+//         return obj.hasOwnProperty(typeof item+item) ? false : (obj[typeof item+item])=true;
+//     })
+// }
+// console.log(f(arr));
