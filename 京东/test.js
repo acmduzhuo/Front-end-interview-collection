@@ -21,3 +21,13 @@
 
 //5.
 //堆排序不是一种稳定的排序方式
+
+//6.
+//$(selector).attr(attribute)
+//规定要获取其值的属性。
+//$(selector).attr(attribute,value)
+//设置被选元素的属性和值。
+//$(selector).attr(attribute,function(index,oldvalue))
+//设置被选元素的属性和值。
+//$(selector).attr({attribute:value, attribute:value ...})
+//为被选元素设置一个以上的属性和值。
