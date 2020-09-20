@@ -46,22 +46,36 @@
     /*    background: red;*/
     /*}*/
     .parent {
-        /*display: flex;*/
-        /*justify-content: center;*/
-        width: 200px;
-        height: 50px;
-        border: 1px solid red;
         /*position: relative;*/
+        /*不设置的话，子元素实现浏览器的绝对居中*/
+        width: 200px;
+        height: 200px;
+        border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-
     .chilren {
-        position: absolute;
-        left: 50%;
-        margin-left: 100px;
+        /*position: absolute;*/
+        /*!*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。*!*/
+        /*left: 50%;*/
+        /*top: 50%;*/
+        /*transform: translate3d(-50%, -50%, 0);*/
+        /*三个值分别对应了 x、y、z 轴方向的位移。这样我们就完美的实现元素的居中，三者缺一不可，否则生效*/
         width: 50px;
         height: 50px;
         background: red;
     }
+    /*div{*/
+    /*    width: 800px;*/
+    /*    height: 400px;*/
+    /*    background-color: #00FFFF;*/
+    /*}*/
+    /*.abc{*/
+    /*    position: relative;*/
+    /*    top1:200px*/
+    /*}*/
+    /*据上一个元素200px，下移到下一个元素，但是下一个元素保持不动*/
 </style>
 <body>
 <!--<div class="one">-->
@@ -74,5 +88,14 @@
 <div class="parent">
     <div class="chilren"></div>
 </div>
+<!--<div >-->
+
+<!--</div>-->
+<!--<div class="abc">-->
+
+<!--</div>-->
+<!--<div >-->
+
+<!--</div>-->
 </body>
 </html>
