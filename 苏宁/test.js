@@ -233,4 +233,4 @@ removeChild()//删除某个节点子节点
 //     }else{
 //         parent.insertBefore( newElement, targetElement.nextSibling );
 //     };
-// }; 
+// };
