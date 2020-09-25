@@ -3,3 +3,9 @@
 //             -webkit-line-clamp:2;
 //             text-overflow: ellipsis;
 //             overflow: hidden;
+// var a = 1;
+// console.log(a[a]);
+// console.log(a[1]);
+// console.log(1);
+//var Object = new Object(3)(4);
+var Object = new Object('3', '4');

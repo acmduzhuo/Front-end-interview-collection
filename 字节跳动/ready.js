@@ -38,15 +38,15 @@ console.log(foo2, foo2.getA(), foo2.constructor, foo2 instanceof Foo);
 //实现一个new
 function myNew(f, ...args) {
     if(typeof f !== 'function'){
-        throw 'f 必须是函数'
+        throw 'f必须是函数';
     }
-    let obj = {};
-    let ret = f.call(obj, ...args);
+    var obj = {};
+    var set = f.call(obj, ...args);
     Object.setPrototypeOf(obj, f.prototype);
-    let retIsObject = (typeof ret === 'object') && (ret !== null);
-    let retIsFunction = (typeof ret === 'function');
-    if(retIsObject || retIsFunction){
-        return ret;
+    var setIsObject = (typeof set === 'object') && (typeof set !== null);
+    var setIsFunction = (typeof set === 'function');
+    if(setIsObject || setIsFunction){
+        return set;
     } else {
         return obj;
     }
