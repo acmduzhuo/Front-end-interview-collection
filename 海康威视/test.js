@@ -79,3 +79,14 @@
 //8、
 //background-position 见菜鸟教程
 //左上角是0％0％。右下角是100％100％, 如果仅指定了一个值，其他值将是50％默认值为：0％0％
+
+//9、
+//flex
+//让所有的弹性盒模型的子元素都有相同的长度，且忽略他们内部的内容
+//flex-grow、flex-shrink、flex-basis三个属性的缩写。
+//flex:1 为 flex-grow:1
+
+//10、
+const name = 'name';
+const t = {name};
+console.log(t);//{ name: 'name' }
