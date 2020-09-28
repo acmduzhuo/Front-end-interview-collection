@@ -6,7 +6,7 @@
 //3.父元素设置position:relative，子元素设置position:absolute;
 // 然后让元素向右偏移 50%，需要注意，这个时候居中的是子元素的左边线，再使用transform: translateX(-50%);
 // 4.父元素设置 display:flex; justify-content: center;
-// 5.父元素设置display:table-cell 子元素vertical-align:middle
+// 5.父元素设置display:table-cell 子元素vertical-align:middlegg
 
 //水平居中：
 // 1.父元素设置positon: absolute;子元素设置

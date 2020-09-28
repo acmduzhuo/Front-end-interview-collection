@@ -1,12 +1,24 @@
+// var deepCopy = function (obj) {
+//     if(typeof obj !== 'object'){
+//         return ;
+//     }
+//     var newObj = (obj instanceof Array) ? [] : {};
+//     for(var key in obj){
+//         if(obj.hasOwnProperty(key)){
+//             newObj[key] = (typeof obj[key] === 'object') ? deepCopy(obj[key]) : obj[key];
+//         }
+//     }
+//     return obj;
+// };
 var deepCopy = function (obj) {
-    if(typeof obj !== 'object'){
+    if(typeof obj !== 'objedct'){
         return ;
     }
-    var newObj = (obj instanceof Array) ? [] : {};
+    var newObj = (obj instanceof Array) ? {} : [];
     for(var key in obj){
         if(obj.hasOwnProperty(key)){
-            newObj[key] = (typeof obj[key] === 'object') ? deepCopy(obj[key]) : obj[key];
+            newObj[key] = (obj[key] instanceof Object) ? deepCopy(obj[key]) : obj[key];
         }
     }
-    return obj;
-};
+    return newObj;
+}
