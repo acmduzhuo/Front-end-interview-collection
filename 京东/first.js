@@ -38,3 +38,16 @@
 // var newObj = {};
 // newObj.__proto__ = obj.prototype;
 // obj.call(newObj);
+
+//5、React-router的原理
+// 监听url变化或者重写push.history，在重写的函数里增加回调。
+// 这样你就能在url变化的时候获取url，解析url，匹配路径所对应的组件，展示他。
+
+//6、
+//link标签与import标签的区别
+//link是html标签，而@import是css提供的
+//页面被加载时，link也会被加载，而@import引用的css则会等到页面加载结束之后加载
+//link是属于html标签，兼容性很好，@import只有IE5以上才能识别
+//link的权重是要高于import的
+
+//7、
