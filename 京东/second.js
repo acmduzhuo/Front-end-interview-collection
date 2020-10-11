@@ -34,5 +34,13 @@
 // Child2.prototype = new Parent2();//子类原型等于父类实例
 // var s2 = new Child2();
 // var s3 = new Child2();
-// console.log(s2.name);
-// console.log(s2.say());
+// console.log(s2.name);//大黄
+// console.log(s2.say());//say bye bye  undefined
+// // s2.say();//say bye bye
+// s2.play.push(4);
+// console.log(s2.play);//[ 1, 2, 3, 4 ]
+// console.log(s3.play);//[ 1, 2, 3, 4 ]
+//浅拷贝
+// 通过子类的实例对象修改父类上的属性和方法，
+// 那么所有子类的所有实例对象上的属性和方法都会被改变。
+//（3）组合继承（4）原型式继承（5）寄生式继承（6）寄生组合式继承
