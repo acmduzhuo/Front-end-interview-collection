@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>距离吃饭时间</h1>
+<span id="time"></span>
+<script type="text/javascript">
+    var oSpan=document.getElementById('time');
+    function task(){
+        var now=new Date();
+        var fangxue=new Date('当天的日期 22:30:00');
+        var s=parseInt((fangxue-now)/1000);//总共的秒数
+        if(s){
+            var days=parseInt(s/3600/24);//天数
+            var h=parseInt(s/3600%24);//小时数
+            var m=parseInt(s/60%60);//分钟
+            var ss=parseInt(s%60);//秒数
+            oSpan.innerHTML=`${days}天${h}小时${m}分钟${ss}秒`
+        }else{
+            clearInterval(timer);
+            oSpan.innerHTML="恰饭了"
+        }
+    }
+    var timer=setInterval(task,1000)//每过一秒执行一次，并且用timer接收
+</script>
+</body>
+</html>
