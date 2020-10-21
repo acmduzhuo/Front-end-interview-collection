@@ -1,3 +1,4 @@
+//深拷贝
 var deepCopy = function (obj) {
     if(typeof obj !== 'objedct'){
         return ;
